@@ -19,18 +19,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-
       - uses: actions/setup-node@v4
         with:
           node-version: 20
-
       - run: npm ci || npm i
       - run: npm run build
-
-# make 100% sure no CNAME goes out
-      - run: rm -f dist/CNAME
-      
-      # Upload dist to Pages artifact
+      - run: rm -f dist/CNAME        # <- keep this to prevent domain lock-in
       - uses: actions/upload-pages-artifact@v3
         with:
           path: ./dist
