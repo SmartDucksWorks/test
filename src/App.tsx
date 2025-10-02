@@ -236,9 +236,7 @@ export default function App() {
 
           {/* Technology Video (autoplay on scroll) */}
           <div className="mt-16 rounded-2xl overflow-hidden shadow-lg border">
-            <video
-              ref={videoRef}
-              src="https://cyclingbatteriesvideotest.tor1.cdn.digitaloceanspaces.com/file.mp4"
+            <video$1src="https://cyclingbatteriesvideotest.tor1.cdn.digitaloceanspaces.com/file.mp4" poster="/media/video-poster.jpg"
               className="w-full h-auto object-contain"
               muted
               playsInline
