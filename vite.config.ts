@@ -1,7 +1,6 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
-
 export default defineConfig({
   plugins: [react()],
-  base: "/test/", // repo name + trailing slash
+  base: "/test/",   // EXACT repo name + trailing slash
 });
