@@ -1,4 +1,4 @@
-import React, { useEffect, useState, type ReactNode } from "react";
+import React, { useEffect, useState, useRef, type ReactNode } from "react";
 
 // ===============================
 // Types
@@ -68,28 +68,6 @@ export default function App() {
   const [mobileOpen, setMobileOpen] = useState(false);
   useEffect(() => { document.title = "Cycling Batteries"; }, []);
 
-  useEffect(() => {
-  const video = document.getElementById("techVideo") as HTMLVideoElement | null;
-  if (!video) return;
-
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          video.play().catch(() => {}); // ignore autoplay errors
-        } else {
-          video.pause();
-        }
-      });
-    },
-    { threshold: 0.5 } // play when at least 50% visible
-  );
-
-  observer.observe(video);
-  return () => observer.disconnect();
-}, []);
-
-
   const navItems = [
     { label: "Products", href: "#products" },
     { label: "Technology", href: "#technology" },
@@ -125,7 +103,28 @@ export default function App() {
   const [slideIdx, setSlideIdx] = useState(0);
   useEffect(() => {
     const id = window.setInterval(() => setSlideIdx((i) => (i + 1) % slideshowImages.length), 5000);
-    return () => window.clearInterval(id);
+    // Autoplay video on scroll
+  const videoRef = useRef<HTMLVideoElement | null>(null);
+  useEffect(() => {
+    const v = videoRef.current;
+    if (!v) return;
+    const io = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            v.play().catch(() => {});
+          } else {
+            v.pause();
+          }
+        });
+      },
+      { threshold: 0.5 }
+    );
+    io.observe(v);
+    return () => io.disconnect();
+  }, []);
+
+  return () => window.clearInterval(id);
   }, []);
 
   return (
@@ -235,15 +234,16 @@ export default function App() {
             <p className="text-gray-600 max-w-2xl mx-auto">At Cycling Batteries, we revolutionize urban mobility by prioritizing sustainable solutions and collaborative technologies. Our approach to battery innovation enables us to create a greener, smarter future for urban transportation.</p>
           </div>
 
-          {/* Video placeholder (portrait) */}
-          {/* Technology Video */}
+          {/* Technology Video (autoplay on scroll) */}
           <div className="mt-16 rounded-2xl overflow-hidden shadow-lg border">
             <video
+              ref={videoRef}
               src="https://cyclingbatteriesvideotest.tor1.cdn.digitaloceanspaces.com/file.mp4"
               className="w-full h-auto object-contain"
               muted
               playsInline
               loop
+              controls
             />
           </div>
         </Container>
