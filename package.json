@@ -1,9 +1,16 @@
 {
+  "name": "cycling-batteries",
+  "private": true,
+  "version": "1.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build && cp dist/index.html dist/404.html",
     "preview": "vite preview --port 5173"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
   },
   "devDependencies": {
     "@vitejs/plugin-react": "^4.3.2",
@@ -14,9 +21,5 @@
     "vite": "^5.4.8",
     "@types/react": "^18.3.5",
     "@types/react-dom": "^18.3.0"
-  },
-  "dependencies": {
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1"
   }
 }
