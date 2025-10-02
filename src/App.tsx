@@ -239,7 +239,7 @@ export default function App() {
           {/* Technology Video */}
           <div className="mt-16 rounded-2xl overflow-hidden shadow-lg border">
             <video
-              src="https://share.icloud.com/photos/040Z2gVVYB6dfL6cH4-CL6Gmg"
+              src="https://cyclingbatteriesvideotest.tor1.cdn.digitaloceanspaces.com/file.mp4"
               className="w-full h-auto object-contain"
               muted
               playsInline
