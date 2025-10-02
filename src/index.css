@@ -1,3 +1,6 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* simple baseline styles so we can see something */
+html, body, #root { height: 100%; }
