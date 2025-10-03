@@ -130,8 +130,17 @@ export default function App() {
     "https://github.com/SmartDucksWorks/test/blob/main/FaZtBatts_image_small7.PNG?raw=true",
   ];
   const [slideIdx, setSlideIdx] = useState(0);
+  const [prevIdx, setPrevIdx] = useState(0);
+  const [fading, setFading] = useState(false);
   useEffect(() => {
-    const id = window.setInterval(() => setSlideIdx((i) => (i + 1) % slideshowImages.length), 5000);
+    const id = window.setInterval(() => {
+      setSlideIdx((i) => {
+        setPrevIdx(i);
+        setFading(true);
+        window.setTimeout(() => setFading(false), 500);
+        return (i + 1) % slideshowImages.length;
+      });
+    }, 5000);
     return () => window.clearInterval(id);
   }, []);
 
@@ -202,7 +211,7 @@ export default function App() {
                   <span className="inline-flex items-center rounded-full border border-gray-200 px-3 py-1 text-xs font-medium text-gray-700 bg-white shadow-sm">Smart battery pack</span>
                   <span className="inline-flex items-center rounded-full border border-gray-200 px-3 py-1 text-xs font-medium text-gray-700 bg-white shadow-sm">For e-bikes & beyond</span>
                 </div>
-                <div className="bg-[#00539D] rounded-2xl p-6 inline-block">
+                <div className="bg-[#00539D] rounded-2xl p-6 inline-block mb-6">
                   <img
                     src="https://github.com/SmartDucksWorks/test/blob/main/FaZtBatts2_green.png?raw=true"
                     alt="Fazt Batts Logo"
@@ -220,12 +229,21 @@ export default function App() {
                 </div>
               </div>
               <div className="flex justify-center lg:justify-end">
+              <div className="relative">
                 <img
                   src={slideshowImages[slideIdx]}
                   alt="Fazt Batts Product"
-                  className="h-full w-auto rounded-2xl object-contain border"
+                  className="h-80 w-auto rounded-2xl object-contain border transition-opacity duration-500"
+                  style={{ opacity: fading ? 0 : 1 }}
+                />
+                <img
+                  src={slideshowImages[prevIdx]}
+                  alt="Fazt Batts Product previous"
+                  className="h-80 w-auto rounded-2xl object-contain border absolute left-0 top-0 transition-opacity duration-500"
+                  style={{ opacity: fading ? 1 : 0 }}
                 />
               </div>
+            </div>
             </div>
           </Container>
         </section>
