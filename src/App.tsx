@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef, type ReactNode } from "react";
+import React, { useEffect, useState, useRef } from "react";
 
 // ===============================
 // Types
@@ -64,7 +64,7 @@ const TeamCard = ({ name, role, blurb, href, imgSrc, imgAlt }: TeamCardProps) =>
 // ===============================
 // App
 // ===============================
-class ErrorBoundary extends React.Component<{ children: ReactNode }, { hasError: boolean; message?: string }> {
+class ErrorBoundary extends React.Component<{ children: React.ReactNode }, { hasError: boolean; message?: string }> {
   constructor(props: { children: ReactNode }) {
     super(props);
     this.state = { hasError: false };
@@ -73,9 +73,7 @@ class ErrorBoundary extends React.Component<{ children: ReactNode }, { hasError:
     return { hasError: true, message: (error as Error)?.message ?? String(error) };
   }
   componentDidCatch(error: unknown, info: React.ErrorInfo) {
-    // surface in console, avoid silent blank screens
-    // eslint-disable-next-line no-console
-    console.error("App crashed:", error, info);
+    // surface in console, avoid silent blank screensconsole.error("App crashed:", error, info);
   }
   render() {
     if (this.state.hasError) {
