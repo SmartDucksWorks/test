@@ -202,11 +202,13 @@ export default function App() {
                   <span className="inline-flex items-center rounded-full border border-gray-200 px-3 py-1 text-xs font-medium text-gray-700 bg-white shadow-sm">Smart battery pack</span>
                   <span className="inline-flex items-center rounded-full border border-gray-200 px-3 py-1 text-xs font-medium text-gray-700 bg-white shadow-sm">For e-bikes & beyond</span>
                 </div>
-                <img
-                  src="https://github.com/SmartDucksWorks/test/blob/main/FaZtBatts2_green.png?raw=true"
-                  alt="Fazt Batts Logo"
-                  className="h-48 sm:h-64 w-auto my-6 mx-auto lg:mx-0"
-                />
+                <div className=\"bg-[#00539D] rounded-2xl p-6 inline-block\">
+                  <img
+                    src=\"https://github.com/SmartDucksWorks/test/blob/main/FaZtBatts2_green.png?raw=true\"
+                    alt=\"Fazt Batts Logo\"
+                    className=\"h-48 sm:h-64 w-auto mx-auto\"
+                  />
+                </div>
                 <p className="-mt-2 text-2xl font-semibold">The Safest, Fastest and Smartest E-bike batteries on Earth.</p>
                 <p className="mt-4 text-lg text-gray-600">The Cycling Batteries Corporation is pioneering the E-bike battery revolution by creating the most efficient, convenient, universally compatible, and safe e-bike batteries to serve 300+ million global e-bike users.</p>
                 <div className="mt-8 flex items-center justify-center lg:justify-start gap-3">
