@@ -64,6 +64,35 @@ const TeamCard = ({ name, role, blurb, href, imgSrc, imgAlt }: TeamCardProps) =>
 // ===============================
 // App
 // ===============================
+class ErrorBoundary extends React.Component<{ children: ReactNode }, { hasError: boolean; message?: string }> {
+  constructor(props: { children: ReactNode }) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  static getDerivedStateFromError(error: unknown) {
+    return { hasError: true, message: (error as Error)?.message ?? String(error) };
+  }
+  componentDidCatch(error: unknown, info: React.ErrorInfo) {
+    // surface in console, avoid silent blank screens
+    // eslint-disable-next-line no-console
+    console.error("App crashed:", error, info);
+  }
+  render() {
+    if (this.state.hasError) {
+      return (
+    <ErrorBoundary>
+      <div className="min-h-screen flex items-center justify-center p-6">
+          <div className="rounded-xl border p-6 shadow bg-white max-w-lg text-center">
+            <h1 className="text-xl font-bold mb-2">Something went wrong</h1>
+            <p className="text-gray-600 text-sm">{this.state.message}</p>
+          </div>
+        </div>
+      );
+    }
+    return this.props.children as React.ReactElement;
+  }
+}
+
 export default function App() {
   const [mobileOpen, setMobileOpen] = useState(false);
   useEffect(() => { document.title = "Cycling Batteries"; }, []);
@@ -236,7 +265,10 @@ export default function App() {
 
           {/* Technology Video (autoplay on scroll) */}
           <div className="mt-16 rounded-2xl overflow-hidden shadow-lg border">
-            <video$1src="https://cyclingbatteriesvideotest.tor1.cdn.digitaloceanspaces.com/file.mp4" poster="/media/video-poster.jpg"
+            <video
+              ref={videoRef}
+              src="https://cyclingbatteriesvideotest.tor1.cdn.digitaloceanspaces.com/file.mp4"
+              poster="https://cyclingbatteriesvideotest.tor1.cdn.digitaloceanspaces.com/poster.jpg"
               className="w-full h-auto object-contain"
               muted
               playsInline
@@ -333,6 +365,7 @@ export default function App() {
           </div>
         </Container>
       </footer>
-    </div>
+      </div>
+    </ErrorBoundary>
   );
 }
