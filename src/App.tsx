@@ -202,11 +202,11 @@ export default function App() {
                   <span className="inline-flex items-center rounded-full border border-gray-200 px-3 py-1 text-xs font-medium text-gray-700 bg-white shadow-sm">Smart battery pack</span>
                   <span className="inline-flex items-center rounded-full border border-gray-200 px-3 py-1 text-xs font-medium text-gray-700 bg-white shadow-sm">For e-bikes & beyond</span>
                 </div>
-                <div className=\"bg-[#00539D] rounded-2xl p-6 inline-block\">
+                <div className="bg-[#00539D] rounded-2xl p-6 inline-block">
                   <img
-                    src=\"https://github.com/SmartDucksWorks/test/blob/main/FaZtBatts2_green.png?raw=true\"
-                    alt=\"Fazt Batts Logo\"
-                    className=\"h-48 sm:h-64 w-auto mx-auto\"
+                    src="https://github.com/SmartDucksWorks/test/blob/main/FaZtBatts2_green.png?raw=true"
+                    alt="Fazt Batts Logo"
+                    className="h-48 sm:h-64 w-auto mx-auto"
                   />
                 </div>
                 <p className="-mt-2 text-2xl font-semibold">The Safest, Fastest and Smartest E-bike batteries on Earth.</p>
