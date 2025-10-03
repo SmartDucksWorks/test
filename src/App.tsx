@@ -233,13 +233,13 @@ export default function App() {
                 <img
                   src={slideshowImages[slideIdx]}
                   alt="Fazt Batts Product"
-                  className="h-80 w-auto rounded-2xl object-contain border transition-opacity duration-500"
+                  className="h-full w-auto rounded-2xl object-contain border transition-opacity duration-500"
                   style={{ opacity: fading ? 0 : 1 }}
                 />
                 <img
                   src={slideshowImages[prevIdx]}
                   alt="Fazt Batts Product previous"
-                  className="h-80 w-auto rounded-2xl object-contain border absolute left-0 top-0 transition-opacity duration-500"
+                  className="h-full w-auto rounded-2xl object-contain border absolute left-0 top-0 transition-opacity duration-500"
                   style={{ opacity: fading ? 1 : 0 }}
                 />
               </div>
@@ -289,7 +289,7 @@ export default function App() {
               <video
                 ref={videoRef}
                 src="https://cyclingbatteriesvideotest.tor1.cdn.digitaloceanspaces.com/file.mp4"
-                poster="https://cyclingbatteriesvideotest.tor1.cdn.digitaloceanspaces.com/poster.jpg"
+                poster="https://cyclingbatteriesvideotest.tor1.cdn.digitaloceanspaces.com/VideoPoster.png"
                 className="w-full h-auto object-contain"
                 muted
                 playsInline
