@@ -131,7 +131,7 @@ export default function App() {
       <header className="sticky top-0 z-40 border-b bg-[#00539D] text-white h-32 flex items-end">
         <Container className="w-full flex items-end justify-between py-4">
           <a href="#" className="flex items-end gap-10 font-semibold">
-            <img src="https://github.com/SmartDucksWorks/test/blob/main/CyclingBatteriesLogo_Hi-res1A.png" alt="Cycling Batteries Logo" className="h-28 w-auto" />
+            <img src="https://github.com/SmartDucksWorks/test/blob/main/CyclingBatteriesLogo_Hi-res1A.png?raw=true" alt="Cycling Batteries Logo" className="h-28 w-auto" />
           </a>
           <nav className="hidden md:flex items-end gap-10 text-2xl">
             {navItems.map((n) => (
@@ -343,7 +343,7 @@ export default function App() {
       <footer className="border-t bg-[#00539D] text-white">
         <Container className="py-10 flex flex-col items-center justify-center gap-4 text-center">
           <div className="flex items-center gap-6 text-sm">
-            <img src="/CyclingBatteriesLogo_Hi-res1A.png" alt="Cycling Batteries Logo" className="h-24 w-auto" />
+            <img src="https://github.com/SmartDucksWorks/test/blob/main/CyclingBatteriesLogo_Hi-res1A.png?raw=true" alt="Cycling Batteries Logo" className="h-24 w-auto" />
             <span>© {new Date().getFullYear()} Cycling Batteries — E-mobility Revolution. Safer, Faster, Smarter E-Bike Batteries.</span>
           </div>
           <div className="flex items-center gap-6 text-sm">
