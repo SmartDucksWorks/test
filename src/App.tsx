@@ -163,9 +163,9 @@ export default function App() {
       {/* Hero */}
       <section>
         <Container className="py-16 sm:py-24">
-          <div className="grid lg:grid-cols-2 gap-10 items-center max-w-6xl mx-auto">
+          <div className="grid lg:grid-cols-2 gap-10 items-start max-w-6xl mx-auto">
             <div className="text-center lg:text-left">
-              <div className="flex gap-2 mb-6 flex-wrap justify-center">
+              <div className="flex gap-2 mb-6 flex-wrap justify-start">
                 <span className="inline-flex items-center rounded-full border border-gray-200 px-4 py-1.5 text-sm font-medium text-gray-700 bg-white shadow-sm">Fast-swap ecosystem</span>
                 <span className="inline-flex items-center rounded-full border border-gray-200 px-4 py-1.5 text-sm font-medium text-gray-700 bg-white shadow-sm">Smart battery pack</span>
                 <span className="inline-flex items-center rounded-full border border-gray-200 px-4 py-1.5 text-sm font-medium text-gray-700 bg-white shadow-sm">For e-bikes & beyond</span>
@@ -188,7 +188,7 @@ export default function App() {
               </div>
             </div>
             <div className="mt-6 lg:mt-10 flex justify-center lg:justify-end">
-              <div className="relative h-[26rem] sm:h-[28rem] lg:h-[34rem]">
+              <div className="relative h-[32rem] sm:h-[36rem] lg:h-[44rem]">
                 <img
                   src={slideshowImages[slideIdx]}
                   alt="Fazt Batts Product"
