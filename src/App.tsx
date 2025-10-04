@@ -164,7 +164,16 @@ export default function App() {
       <section>
         <Container className="py-16 sm:py-24">
           {/* Centered bubbles row (full-width) */}
-          <div className="bg-[#00539D] rounded-2xl p-6 inline-block mb-6">
+          <div className="flex gap-2 mb-8 flex-wrap justify-center">
+            <span className="inline-flex items-center rounded-full border border-gray-200 px-4 py-1.5 text-sm font-medium text-gray-700 bg-white shadow-sm">Fast-swap ecosystem</span>
+            <span className="inline-flex items-center rounded-full border border-gray-200 px-4 py-1.5 text-sm font-medium text-gray-700 bg-white shadow-sm">Smart battery pack</span>
+            <span className="inline-flex items-center rounded-full border border-gray-200 px-4 py-1.5 text-sm font-medium text-gray-700 bg-white shadow-sm">For e-bikes & beyond</span>
+          </div>
+
+          <div className="grid lg:grid-cols-2 gap-10 items-start max-w-6xl mx-auto">
+            {/* Left: logo + copy */}
+            <div className="text-center lg:text-left">
+              <div className="bg-[#00539D] rounded-2xl p-6 inline-block mb-6">
                 <img
                   src="https://github.com/SmartDucksWorks/test/blob/main/FaZtBatts2_green.png?raw=true"
                   alt="Fazt Batts Logo"
@@ -174,13 +183,15 @@ export default function App() {
               <p className="text-2xl font-semibold">Fastest charging bike battery on Earth.</p>
               <p className="mt-4 text-lg text-gray-600">0–100% in 12 minutes from any electrical plug, anywhere. Fire-proof casing for both battery and charger.</p>
               <div className="mt-8 flex items-center justify-center lg:justify-start gap-3">
-                <CTAButton href="#waitlist">Get early access</CTAButton>
-                <a href="#technology" onClick={(e) => onAnchorClick(e, "#technology")} className="inline-flex items-center gap-2 text-sm font-semibold hover:opacity-80">
+                <a href="#waitlist" className="inline-flex items-center justify-center rounded-2xl px-5 py-3 text-sm font-semibold bg-[#80D535] text-white hover:bg-[#6fbf2d] shadow">Get early access</a>
+                <a href="#technology" className="inline-flex items-center gap-2 text-sm font-semibold hover:opacity-80">
                   Learn more
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-4 h-4"><path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5"/></svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-4 h-4"><path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5"/></svg>
                 </a>
               </div>
             </div>
+
+            {/* Right: large crossfading carousel */}
             <div className="mt-6 lg:mt-10 flex justify-center lg:justify-end">
               <div className="relative h-[32rem] sm:h-[36rem] lg:h-[44rem]">
                 <img
