@@ -165,10 +165,10 @@ export default function App() {
         <Container className="py-16 sm:py-24">
           <div className="grid lg:grid-cols-2 gap-10 items-center max-w-6xl mx-auto">
             <div className="text-center lg:text-left">
-              <div className=\"flex gap-2 mb-6 flex-wrap justify-center\">
-                <span className=\"inline-flex items-center rounded-full border border-gray-200 px-4 py-1.5 text-sm font-medium text-gray-700 bg-white shadow-sm\">Fast-swap ecosystem</span>
-                <span className=\"inline-flex items-center rounded-full border border-gray-200 px-4 py-1.5 text-sm font-medium text-gray-700 bg-white shadow-sm\">Smart battery pack</span>
-                <span className=\"inline-flex items-center rounded-full border border-gray-200 px-4 py-1.5 text-sm font-medium text-gray-700 bg-white shadow-sm\">For e-bikes & beyond</span>
+              <div className="flex gap-2 mb-6 flex-wrap justify-center">
+                <span className="inline-flex items-center rounded-full border border-gray-200 px-4 py-1.5 text-sm font-medium text-gray-700 bg-white shadow-sm">Fast-swap ecosystem</span>
+                <span className="inline-flex items-center rounded-full border border-gray-200 px-4 py-1.5 text-sm font-medium text-gray-700 bg-white shadow-sm">Smart battery pack</span>
+                <span className="inline-flex items-center rounded-full border border-gray-200 px-4 py-1.5 text-sm font-medium text-gray-700 bg-white shadow-sm">For e-bikes & beyond</span>
               </div>
               <div className="bg-[#00539D] rounded-2xl p-6 inline-block mb-6">
                 <img
@@ -187,8 +187,8 @@ export default function App() {
                 </a>
               </div>
             </div>
-            <div className=\"mt-6 lg:mt-10 flex justify-center lg:justify-end\">
-              <div className=\"relative h-[26rem] sm:h-[28rem] lg:h-[34rem]\">
+            <div className="mt-6 lg:mt-10 flex justify-center lg:justify-end">
+              <div className="relative h-[26rem] sm:h-[28rem] lg:h-[34rem]">
                 <img
                   src={slideshowImages[slideIdx]}
                   alt="Fazt Batts Product"
@@ -211,15 +211,15 @@ export default function App() {
       <section id="products" className="py-20">
         <Container>
           <SectionTitle
-            eyebrow=\"Products\"
+            eyebrow="Products"
             title={
-              <span aria-label=\"COMBO\" className=\"inline-flex items-baseline gap-0 text-6xl sm:text-7xl lg:text-8xl font-extrabold tracking-tight\">
-                <span className=\"text-[#00539D]\">CO</span>
-                <span className=\"text-[#80D535]\">M</span>
-                <span className=\"text-[#00539D]\">BO</span>
+              <span aria-label="COMBO" className="inline-flex items-baseline gap-0 text-6xl sm:text-7xl lg:text-8xl font-extrabold tracking-tight">
+                <span className="text-[#00539D]">CO</span>
+                <span className="text-[#80D535]">M</span>
+                <span className="text-[#00539D]">BO</span>
               </span>
             }
-            subtitle=\"The COMBO is our first product: FaZt Batts + FaZt Charger. Snap together, plug into any outlet, and get 0–100% in 12 minutes or less.\"
+            subtitle="The COMBO is our first product: FaZt Batts + FaZt Charger. Snap together, plug into any outlet, and get 0–100% in 12 minutes or less."
           />
           <div className="mt-10 grid md:grid-cols-3 gap-6">
             <FeatureCard title="Modular packs">Hot-swap in seconds so riders spend more time moving and less time waiting.</FeatureCard>
