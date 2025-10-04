@@ -163,14 +163,8 @@ export default function App() {
       {/* Hero */}
       <section>
         <Container className="py-16 sm:py-24">
-          <div className="grid lg:grid-cols-2 gap-10 items-start max-w-6xl mx-auto">
-            <div className="text-center lg:text-left">
-              <div className="flex gap-2 mb-6 flex-wrap justify-start">
-                <span className="inline-flex items-center rounded-full border border-gray-200 px-4 py-1.5 text-sm font-medium text-gray-700 bg-white shadow-sm">Fast-swap ecosystem</span>
-                <span className="inline-flex items-center rounded-full border border-gray-200 px-4 py-1.5 text-sm font-medium text-gray-700 bg-white shadow-sm">Smart battery pack</span>
-                <span className="inline-flex items-center rounded-full border border-gray-200 px-4 py-1.5 text-sm font-medium text-gray-700 bg-white shadow-sm">For e-bikes & beyond</span>
-              </div>
-              <div className="bg-[#00539D] rounded-2xl p-6 inline-block mb-6">
+          {/* Centered bubbles row (full-width) */}
+          <div className="bg-[#00539D] rounded-2xl p-6 inline-block mb-6">
                 <img
                   src="https://github.com/SmartDucksWorks/test/blob/main/FaZtBatts2_green.png?raw=true"
                   alt="Fazt Batts Logo"
