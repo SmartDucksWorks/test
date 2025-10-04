@@ -165,9 +165,9 @@ export default function App() {
         <Container className="py-16 sm:py-24">
           {/* Centered bubbles row (full-width) */}
           <div className="flex gap-2 mb-8 flex-wrap justify-center">
-            <span className="inline-flex items-center rounded-full border border-gray-200 px-4 py-1.5 text-sm font-medium text-gray-700 bg-white shadow-sm">Fast-swap ecosystem</span>
-            <span className="inline-flex items-center rounded-full border border-gray-200 px-4 py-1.5 text-sm font-medium text-gray-700 bg-white shadow-sm">Smart battery pack</span>
-            <span className="inline-flex items-center rounded-full border border-gray-200 px-4 py-1.5 text-sm font-medium text-gray-700 bg-white shadow-sm">For e-bikes & beyond</span>
+            <span className="inline-flex items-center rounded-2xl border border-gray-200 px-5 py-2 text-sm font-semibold text-gray-800 bg-white shadow-sm">Fast-swap ecosystem</span>
+            <span className="inline-flex items-center rounded-2xl border border-gray-200 px-5 py-2 text-sm font-semibold text-gray-800 bg-white shadow-sm">Smart battery pack</span>
+            <span className="inline-flex items-center rounded-2xl border border-gray-200 px-5 py-2 text-sm font-semibold text-gray-800 bg-white shadow-sm">For e-bikes & beyond</span>
           </div>
 
           <div className="grid lg:grid-cols-2 gap-10 items-start max-w-6xl mx-auto">
