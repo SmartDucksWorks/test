@@ -192,18 +192,18 @@ export default function App() {
             </div>
 
             {/* Right: large crossfading carousel */}
-            <div className="mt-6 lg:mt-10 flex justify-center lg:justify-end">
+            <div className=\"flex justify-center lg:justify-end mt-0 self-start\">
               <div className="relative h-[32rem] sm:h-[36rem] lg:h-[44rem]">
                 <img
                   src={slideshowImages[slideIdx]}
                   alt="Fazt Batts Product"
-                  className="h-full w-auto rounded-2xl object-contain border transition-opacity duration-500"
+                  className=\"h-full w-auto rounded-2xl object-contain object-top border transition-opacity duration-500\"
                   style={{ opacity: fading ? 0 : 1 }}
                 />
                 <img
                   src={slideshowImages[prevIdx]}
                   alt="Fazt Batts Product previous"
-                  className="h-full w-auto rounded-2xl object-contain border absolute left-0 top-0 transition-opacity duration-500"
+                  className=\"h-full w-auto rounded-2xl object-contain object-top border absolute left-0 top-0 transition-opacity duration-500\"
                   style={{ opacity: fading ? 1 : 0 }}
                 />
               </div>
@@ -234,7 +234,7 @@ export default function App() {
 
           {/* Full-width product image */}
           <div className="mt-12 rounded-2xl overflow-hidden shadow border">
-            <img src="https://github.com/SmartDucksWorks/test/blob/main/COMBO.PNG?raw=true" alt="The Combo" className="w-full h-auto object-contain" />
+            <img src="https://github.com/SmartDucksWorks/test/blob/main/COMBO.PNG?raw=true" alt="The Combo" className=\"w-full h-auto object-contain object-top\" />
           </div>
         </Container>
       </section>
@@ -253,7 +253,7 @@ export default function App() {
               ref={videoRef}
               src="https://cyclingbatteriesvideotest.tor1.cdn.digitaloceanspaces.com/file.mp4"
               poster="https://cyclingbatteriesvideotest.tor1.cdn.digitaloceanspaces.com/VideoPoster.png"
-              className="w-full h-auto object-contain"
+              className=\"w-full h-auto object-contain object-top\"
               muted
               playsInline
               loop
